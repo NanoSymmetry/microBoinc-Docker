@@ -1,5 +1,6 @@
 # microBoinc-Docker
 Docker image for the microBoinc client used by the Minecraft@Home community.
+
 Can be found here: https://hub.docker.com/r/dockrails/microboinc
 
 ## Useage
