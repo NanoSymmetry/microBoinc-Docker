@@ -7,5 +7,9 @@ ENV WORKERS=1
 RUN apk add --no-cache wget \
     && wget https://cdn.mcathome.dev/microboinc/clients/microboinc-goes-brr-v0.0.1.jar -O client.jar
 
+# create and change the user to non-root
+RUN net user /add boincRunner
+USER boincRunner
+
 # Run the client
 ENTRYPOINT java -jar client.jar --apikey $APIKEY --worker-count $WORKERS
