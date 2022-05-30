@@ -8,7 +8,7 @@ RUN apk add --no-cache wget \
     && wget https://cdn.mcathome.dev/microboinc/clients/microboinc-goes-brr-v0.0.1.jar -O client.jar
 
 # create and change the user to non-root
-RUN net user /add boincRunner
+RUN addgroup -S boincGroup && adduser -S boincRunner -G boincGroup
 USER boincRunner
 
 # Run the client
