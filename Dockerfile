@@ -5,7 +5,7 @@ ENV WORKERS=1
 
 #Install wget to download the client
 RUN apk add --no-cache curl \
-    && curl https://cdn.mcathome.dev/microboinc/clients/microboinc-goes-brr-v0.0.1.jar --output client.jar
+    && curl https://cdn.mcathome.dev/microboinc/clients/latest.jar --output client.jar
 
 # create and change the user to non-root
 RUN addgroup -S boincGroup && adduser -S boincRunner -G boincGroup
